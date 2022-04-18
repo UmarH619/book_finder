@@ -14,13 +14,14 @@
         <button id="search">Search</button>
     </form>
  <section class=books>
-    <div class=book>
-       <img src=https://dnajs.org/graphics/sample-book-cover.jpg alt=cover>
-       <div>
-          <h2>Title</h2>
-          <p>Publisher</p>
-          <i>Price</i>
-       </div>
+    <div id=book class=dna-template>
+        <img src=~~volumeInfo.imageLinks.thumbnail~~ alt=cover>
+        <div>
+           <h2>~~volumeInfo.title~~</h2>
+           <p>~~volumeInfo.publisher~~</p>
+           <i>~~saleInfo.listPrice.amount~~</i>
+        </div>
+     </div>
     </div>
  </section>
 </main>
