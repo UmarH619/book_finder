@@ -31,3 +31,12 @@ form button:hover{
     background: orange;
     color: white;
 }
+
+
+body      { font-family: 'Montserrat', sans-serif; margin: 5px; display: flex;
+            align-items: center; justify-content: center; color: black;}
+.book     { display: flex; align-items: flex-start;
+            max-width: 400px; background-color: darkgrey;
+            padding: 10px; margin: 10px 0px; }
+.book img { width: 100px; margin-right: 10px; }
+.book h2  { margin: 0px; }
