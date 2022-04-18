@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
+body {
+    background-color: #343434;
+}
+
+h1, form {
+    font-family: 'Montserrat', sans-serif;
+    color: orange;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    background: white;
+}
+
+form button {
+    color: orange;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background: orange;
+    color: white;
+}

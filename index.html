@@ -3,16 +3,26 @@
 <head>
 <meta charset=utf-8>
 <title>Book Finder</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <main>
    <h1>Book Finder</h1>
-   <label>
-    Search:
-    <input placeholder="Enter terms" autofocus>
- </label>
- <button>Find</button>
+   <form>
+        <input placeholder="Enter terms" autofocus type="text" class="search-input">
+        <button id="search">Search</button>
+    </form>
+ <section class=books>
+    <div class=book>
+       <img src=https://dnajs.org/graphics/sample-book-cover.jpg alt=cover>
+       <div>
+          <h2>Title</h2>
+          <p>Publisher</p>
+          <i>Price</i>
+       </div>
+    </div>
+ </section>
 </main>
 
 </body>
