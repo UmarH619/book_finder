@@ -8,12 +8,9 @@ h1, form {
     font-family: 'Montserrat', sans-serif;
     color: orange;
     font-size: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-form input, form button {
+input, button, label {
     padding: 0.5rem;
     font-size: 2rem;
     font-family: 'Montserrat', sans-serif;
@@ -21,22 +18,17 @@ form input, form button {
     background: white;
 }
 
-form button {
+label {
     color: orange;
-    cursor: pointer;
     transition: all 0.3s ease;
 }
 
-form button:hover{
-    background: orange;
-    color: white;
-}
 
 
-body      { font-family: 'Montserrat', sans-serif; margin: 5px; display: flex;
-            align-items: center; justify-content: center; color: black;}
-#book     { display: flex; align-items: flex-start;
+body      { font-family: 'Montserrat', sans-serif; margin: 30px; }
+input     { font-size: 1.2rem }
+.book     { display: flex; align-items: flex-start;
             max-width: 400px; background-color: darkgrey;
             padding: 10px; margin: 10px 0px; }
-#book img { width: 100px; margin-right: 10px; }
-#book h2  { margin: 0px; }
+.book img { width: 100px; margin-right: 10px; }
+.book h2  { margin: 0px; }

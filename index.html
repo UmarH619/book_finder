@@ -1,30 +1,47 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html>
 <head>
 <meta charset=utf-8>
 <title>Book Finder</title>
 <link rel="stylesheet" href="styles.css">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/dna.js@2.0/dist/dna.css>
+<style>
+
+</style>
 </head>
 <body>
 
 <main>
    <h1>Book Finder</h1>
-   <form>
-        <input placeholder="Enter terms" autofocus type="text" class="search-input">
-        <button id="search">Search</button>
-    </form>
- <section class=books>
-    <div id=book class=dna-template>
-        <img src=~~volumeInfo.imageLinks.thumbnail~~ alt=cover>
-        <div>
-           <h2>~~volumeInfo.title~~</h2>
-           <p>~~volumeInfo.publisher~~</p>
-           <i>~~saleInfo.listPrice.amount~~</i>
-        </div>
-     </div>
-    </div>
- </section>
+   <label>
+      Search:
+      <input data-smart-update=findBooks placeholder="Enter terms" autofocus>
+   </label>
+   <section class=books>
+      <div id=book class=dna-template>
+         <img src=~~volumeInfo.imageLinks.thumbnail~~ alt=cover>
+         <div>
+            <h2>~~volumeInfo.title~~</h2>
+            <p>~~volumeInfo.publisher~~</p>
+            <i>~~saleInfo.listPrice.amount~~</i>
+         </div>
+      </div>
+   </section>
 </main>
 
+<script src=https://cdn.jsdelivr.net/npm/jquery@3.6/dist/jquery.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/dna.js@2.0/dist/dna.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/fetch-json@2.6/dist/fetch-json.min.js></script>
+<script>
+   const findBooks = (elem) => {
+      const terms = elem.val();
+      const url = 'https://www.googleapis.com/books/v1/volumes';
+      const handleResults = (data) =>
+         dna.clone('book', data.items, { empty: true, fade: true });
+      fetchJson.get(url, { q: terms }).then(handleResults);
+      console.log(terms);  //verify user input
+      };
+</script>
 </body>
 </html>
